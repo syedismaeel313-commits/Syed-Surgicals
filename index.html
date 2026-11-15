@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SYED SURGICALS - Medical and healthcare supply solutions.">
+<meta name="description" content="SYED SURGICALS - Professional medical and healthcare supply solutions.">
 <title>SYED SURGICALS | Medical Supply Solutions</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,382 +13,146 @@
 
 <style>
 :root {
-  --bg: #090b0d;
-  --surface: #111518;
-  --surface2: #171d20;
-  --red: #a92732;
-  --red-light: #d34a53;
-  --white: #f5f3ef;
-  --muted: #9da4a6;
-  --line: rgba(255,255,255,.10);
+  --bg:#090b0d;
+  --surface:#111518;
+  --surface2:#171d20;
+  --red:#a92732;
+  --red-light:#d34a53;
+  --white:#f5f3ef;
+  --muted:#9da4a6;
+  --line:rgba(255,255,255,.10);
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.container{width:min(1160px,90%);margin:auto}
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  background:var(--bg);
-  color:var(--white);
-  font-family:'Inter',sans-serif;
-  line-height:1.7;
-}
-a { color:inherit; text-decoration:none; }
-button,input,textarea { font:inherit; }
+header{position:sticky;top:0;z-index:100;background:rgba(9,11,13,.94);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-family:'Cinzel',serif;font-size:22px;font-weight:700;letter-spacing:2px}
+.logo span{color:var(--red-light)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#c3c6c5;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--red-light)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px;cursor:pointer}
 
-.container { width:min(1160px,90%); margin:auto; }
+.btn{display:inline-block;padding:13px 23px;background:var(--red);color:white;border:1px solid var(--red);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:.3s;cursor:pointer}
+.btn:hover{background:transparent;color:white}
+.btn-outline{background:transparent;border-color:#555}
+.btn-outline:hover{background:var(--red);border-color:var(--red)}
 
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(9,11,13,.94);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid var(--line);
-}
-.nav {
-  min-height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-.logo {
-  font-family:'Cinzel',serif;
-  font-size:22px;
-  font-weight:700;
-  letter-spacing:2px;
-}
-.logo span { color:var(--red-light); }
-.nav-links { display:flex; gap:28px; align-items:center; }
-.nav-links a {
-  color:#c3c6c5;
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  transition:.3s;
-}
-.nav-links a:hover { color:var(--red-light); }
-.menu-btn {
-  display:none;
-  background:none;
-  border:1px solid var(--line);
-  color:white;
-  padding:8px 12px;
-  cursor:pointer;
-}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(9,11,13,.98),rgba(9,11,13,.80),rgba(9,11,13,.40)),url('images/medical-gloves.jpg') center/cover no-repeat}
+.hero-content{max-width:690px;padding:100px 0}
+.eyebrow{color:var(--red-light);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(38px,6vw,72px);line-height:1.15;letter-spacing:1px;margin-bottom:22px}
+.hero h1 span{color:var(--red-light)}
+.hero p{max-width:550px;color:#c1c5c4;font-size:15px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 
-.btn {
-  display:inline-block;
-  padding:13px 23px;
-  background:var(--red);
-  color:white;
-  border:1px solid var(--red);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  transition:.3s;
-  cursor:pointer;
-}
-.btn:hover { background:transparent; color:white; }
-.btn-outline { background:transparent; border-color:#555; }
-.btn-outline:hover { background:var(--red); border-color:var(--red); }
+.feature-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0e1214}
+.features{display:grid;grid-template-columns:repeat(3,1fr)}
+.feature{padding:27px 20px;text-align:center;border-right:1px solid var(--line)}
+.feature:last-child{border:0}
+.feature strong{display:block;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.feature small{color:var(--muted);font-size:12px}
 
-.hero {
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(9,11,13,.98),rgba(9,11,13,.80),rgba(9,11,13,.40)),
-    url('images/medical-gloves.jpg') center/cover no-repeat;
-}
-.hero-content { max-width:690px; padding:100px 0; }
-.eyebrow {
-  color:var(--red-light);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  margin-bottom:20px;
-}
-.hero h1 {
-  font-family:'Cinzel',serif;
-  font-size:clamp(38px,6vw,72px);
-  line-height:1.15;
-  letter-spacing:1px;
-  margin-bottom:22px;
-}
-.hero h1 span { color:var(--red-light); }
-.hero p { max-width:550px; color:#c1c5c4; font-size:15px; margin-bottom:32px; }
-.hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+section{padding:100px 0}
+.section-heading{max-width:650px;margin-bottom:45px}
+.section-heading h2{font-family:'Cinzel',serif;font-size:clamp(28px,4vw,43px);line-height:1.3;margin-bottom:14px}
+.section-heading p{color:var(--muted);font-size:14px}
+.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}
 
-.feature-strip {
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:#0e1214;
-}
-.features {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-}
-.feature {
-  padding:27px 20px;
-  text-align:center;
-  border-right:1px solid var(--line);
-}
-.feature:last-child { border:0; }
-.feature strong {
-  display:block;
-  font-family:'Montserrat',sans-serif;
-  font-size:12px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-}
-.feature small { color:var(--muted); font-size:12px; }
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-image{min-height:430px;background:linear-gradient(0deg,rgba(0,0,0,.15),transparent),url('images/instrument-trays.jpg') center/cover;border:1px solid var(--line)}
+.about-copy h2{font-family:'Cinzel',serif;font-size:37px;line-height:1.3;margin-bottom:20px}
+.about-copy p{color:var(--muted);margin-bottom:17px;font-size:14px}
+.about-points{margin-top:25px;display:grid;gap:13px}
+.about-points div{font-size:13px;color:#dededb}
+.about-points span{color:var(--red-light);margin-right:10px}
 
-section { padding:100px 0; }
-.section-heading { max-width:650px; margin-bottom:45px; }
-.section-heading h2 {
-  font-family:'Cinzel',serif;
-  font-size:clamp(28px,4vw,43px);
-  line-height:1.3;
-  margin-bottom:14px;
-}
-.section-heading p { color:var(--muted); font-size:14px; }
-.section-heading.center { text-align:center; margin-left:auto; margin-right:auto; }
+.products-section{background:#0e1214}
+.product-tools{display:flex;justify-content:space-between;gap:15px;margin-bottom:30px;flex-wrap:wrap}
+.search{background:var(--surface);color:white;border:1px solid var(--line);padding:12px 16px;width:min(300px,100%);outline:none}
+.search:focus{border-color:var(--red-light)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{background:transparent;border:1px solid var(--line);color:#c7c9c7;padding:10px 14px;font-size:11px;cursor:pointer}
+.filter.active,.filter:hover{background:var(--red);border-color:var(--red);color:white}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product-card{background:var(--surface);border:1px solid var(--line);transition:.3s;overflow:hidden}
+.product-card:hover{transform:translateY(-5px);border-color:#77333a}
+.product-image{height:245px;background:#1b2022;overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.product-card:hover img{transform:scale(1.05)}
+.product-info{padding:22px}
+.product-info small{color:var(--red-light);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
+.product-info h3{font-family:'Montserrat',sans-serif;font-size:16px;margin:8px 0}
+.product-info p{color:var(--muted);font-size:12px;margin-bottom:18px}
+.product-info a{font-size:11px;color:var(--red-light);font-weight:700;letter-spacing:1px}
 
-.about-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:65px;
-  align-items:center;
-}
-.about-image {
-  min-height:430px;
-  background:
-    linear-gradient(0deg,rgba(0,0,0,.15),transparent),
-    url('images/instrument-trays.jpg') center/cover;
-  border:1px solid var(--line);
-}
-.about-copy h2 {
-  font-family:'Cinzel',serif;
-  font-size:37px;
-  line-height:1.3;
-  margin-bottom:20px;
-}
-.about-copy p { color:var(--muted); margin-bottom:17px; font-size:14px; }
-.about-points { margin-top:25px; display:grid; gap:13px; }
-.about-points div { font-size:13px; color:#dededb; }
-.about-points span { color:var(--red-light); margin-right:10px; }
+.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quality-card{padding:30px;background:var(--surface);border:1px solid var(--line)}
+.quality-card .number{font-family:'Cinzel',serif;font-size:35px;color:var(--red-light)}
+.quality-card h3{font-size:15px;margin:10px 0}
+.quality-card p{color:var(--muted);font-size:13px}
 
-.products-section { background:#0e1214; }
-.product-tools {
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  margin-bottom:30px;
-  flex-wrap:wrap;
-}
-.search {
-  background:var(--surface);
-  color:white;
-  border:1px solid var(--line);
-  padding:12px 16px;
-  width:min(300px,100%);
-  outline:none;
-}
-.search:focus { border-color:var(--red-light); }
-.filters { display:flex; gap:8px; flex-wrap:wrap; }
-.filter {
-  background:transparent;
-  border:1px solid var(--line);
-  color:#c7c9c7;
-  padding:10px 14px;
-  font-size:11px;
-  cursor:pointer;
-}
-.filter.active,.filter:hover { background:var(--red); border-color:var(--red); color:white; }
+.contact-section{background:#0e1214}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.contact-info h2{font-family:'Cinzel',serif;font-size:36px;line-height:1.3;margin-bottom:20px}
+.contact-info p{color:var(--muted);font-size:14px;margin-bottom:25px}
+.contact-detail{margin:20px 0}
+.contact-detail small{display:block;color:var(--red-light);letter-spacing:1.5px;text-transform:uppercase;font-size:10px}
+.contact-detail strong{font-size:14px;font-weight:500}
+.contact-form{padding:35px;background:var(--surface);border:1px solid var(--line)}
+.contact-form h3{font-family:'Cinzel',serif;font-size:24px;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact-form input,.contact-form textarea{width:100%;padding:14px;background:#0c1012;border:1px solid var(--line);color:white;margin-bottom:14px;outline:none;font-size:13px}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--red-light)}
+.contact-form textarea{min-height:130px;resize:vertical}
 
-.product-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-.product-card {
-  background:var(--surface);
-  border:1px solid var(--line);
-  transition:.3s;
-  overflow:hidden;
-}
-.product-card:hover { transform:translateY(-5px); border-color:#77333a; }
-.product-image {
-  height:245px;
-  background:#1b2022;
-  overflow:hidden;
-}
-.product-image img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.5s;
-}
-.product-card:hover img { transform:scale(1.05); }
-.product-info { padding:22px; }
-.product-info small {
-  color:var(--red-light);
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-}
-.product-info h3 {
-  font-family:'Montserrat',sans-serif;
-  font-size:16px;
-  margin:8px 0;
-}
-.product-info p { color:var(--muted); font-size:12px; margin-bottom:18px; }
-.product-info a { font-size:11px; color:var(--red-light); font-weight:700; letter-spacing:1px; }
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{padding:25px;background:var(--surface);border:1px solid var(--line)}
+.review .stars{color:#d6a45b;letter-spacing:3px}
+.review p{color:var(--muted);font-size:13px;margin:14px 0}
+.review strong{font-size:12px}
+.demo-note{color:var(--muted);font-size:11px;margin-top:20px}
 
-.quality-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.quality-card {
-  padding:30px;
-  background:var(--surface);
-  border:1px solid var(--line);
-}
-.quality-card .number {
-  font-family:'Cinzel',serif;
-  font-size:35px;
-  color:var(--red-light);
-}
-.quality-card h3 { font-size:15px; margin:10px 0; }
-.quality-card p { color:var(--muted); font-size:13px; }
+.cta{text-align:center;padding:75px 25px;background:linear-gradient(120deg,#251316,#111518);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cta h2{font-family:'Cinzel',serif;font-size:clamp(28px,4vw,42px);margin-bottom:15px}
+.cta p{color:var(--muted);margin-bottom:25px}
 
-.contact-section { background:#0e1214; }
-.contact-grid {
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:60px;
-}
-.contact-info h2 {
-  font-family:'Cinzel',serif;
-  font-size:36px;
-  line-height:1.3;
-  margin-bottom:20px;
-}
-.contact-info p { color:var(--muted); font-size:14px; margin-bottom:25px; }
-.contact-detail { margin:20px 0; }
-.contact-detail small {
-  display:block;
-  color:var(--red-light);
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  font-size:10px;
-}
-.contact-detail strong { font-size:14px; font-weight:500; }
+footer{padding:55px 0 25px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:35px;border-bottom:1px solid var(--line)}
+.footer-brand{max-width:370px}
+.footer-brand p{color:var(--muted);font-size:13px;margin-top:14px}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{color:var(--muted);font-size:12px}
+.footer-links a:hover{color:var(--red-light)}
+.copyright{padding-top:22px;color:#777f80;font-size:11px;text-align:center}
 
-.contact-form {
-  padding:35px;
-  background:var(--surface);
-  border:1px solid var(--line);
+@media(max-width:800px){
+.nav-links{display:none;position:absolute;top:82px;left:0;width:100%;padding:25px;background:#0d1113;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+.nav-links.open{display:flex}
+.menu-btn{display:block}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+.product-grid,.quality-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+.about-image{min-height:300px}
 }
-.contact-form h3 {
-  font-family:'Cinzel',serif;
-  font-size:24px;
-  margin-bottom:22px;
-}
-.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.contact-form input,.contact-form textarea {
-  width:100%;
-  padding:14px;
-  background:#0c1012;
-  border:1px solid var(--line);
-  color:white;
-  margin-bottom:14px;
-  outline:none;
-  font-size:13px;
-}
-.contact-form input:focus,.contact-form textarea:focus { border-color:var(--red-light); }
-.contact-form textarea { min-height:130px; resize:vertical; }
-
-.reviews-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.review {
-  padding:25px;
-  background:var(--surface);
-  border:1px solid var(--line);
-}
-.review .stars { color:#d6a45b; letter-spacing:3px; }
-.review p { color:var(--muted); font-size:13px; margin:14px 0; }
-.review strong { font-size:12px; }
-.demo-note { color:var(--muted); font-size:11px; margin-top:20px; }
-
-.cta {
-  text-align:center;
-  padding:75px 25px;
-  background:linear-gradient(120deg,#251316,#111518);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.cta h2 { font-family:'Cinzel',serif; font-size:clamp(28px,4vw,42px); margin-bottom:15px; }
-.cta p { color:var(--muted); margin-bottom:25px; }
-
-footer { padding:55px 0 25px; }
-.footer-top {
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-  padding-bottom:35px;
-  border-bottom:1px solid var(--line);
-}
-.footer-brand { max-width:370px; }
-.footer-brand p { color:var(--muted); font-size:13px; margin-top:14px; }
-.footer-links { display:flex; gap:22px; flex-wrap:wrap; }
-.footer-links a { color:var(--muted); font-size:12px; }
-.footer-links a:hover { color:var(--red-light); }
-.copyright { padding-top:22px; color:#777f80; font-size:11px; text-align:center; }
-
-@media(max-width:800px) {
-  .nav-links {
-    display:none;
-    position:absolute;
-    top:82px;
-    left:0;
-    width:100%;
-    padding:25px;
-    background:#0d1113;
-    flex-direction:column;
-    align-items:flex-start;
-    border-bottom:1px solid var(--line);
-  }
-  .nav-links.open { display:flex; }
-  .menu-btn { display:block; }
-  .about-grid,.contact-grid { grid-template-columns:1fr; gap:35px; }
-  .product-grid,.quality-grid,.reviews-grid { grid-template-columns:repeat(2,1fr); }
-  .about-image { min-height:300px; }
-}
-@media(max-width:550px) {
-  section { padding:70px 0; }
-  .features { grid-template-columns:1fr; }
-  .feature { border-right:0; border-bottom:1px solid var(--line); }
-  .product-grid,.quality-grid,.reviews-grid { grid-template-columns:1fr; }
-  .form-row { grid-template-columns:1fr; gap:0; }
-  .contact-form { padding:22px; }
-  .hero { min-height:570px; }
-  .hero-content { padding:75px 0; }
+@media(max-width:550px){
+section{padding:70px 0}
+.features{grid-template-columns:1fr}
+.feature{border-right:0;border-bottom:1px solid var(--line)}
+.product-grid,.quality-grid,.reviews-grid{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr;gap:0}
+.contact-form{padding:22px}
+.hero{min-height:570px}
+.hero-content{padding:75px 0}
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="container nav">
     <a href="#home" class="logo">SYED <span>SURGICALS</span></a>
@@ -405,17 +169,12 @@ footer { padding:55px 0 25px; }
 </header>
 
 <main>
-
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-content">
       <div class="eyebrow">Medical Supply Solutions</div>
       <h1>Precision in Every <span>Detail.</span></h1>
-      <p>
-        Welcome to SYED SURGICALS. Explore our sample range of
-        healthcare supplies, professional essentials and medical
-        packaging solutions.
-      </p>
+      <p>Welcome to SYED SURGICALS. Explore our sample range of healthcare supplies, professional essentials and medical packaging solutions.</p>
       <div class="hero-actions">
         <a href="#products" class="btn">Explore Collection</a>
         <a href="#contact" class="btn btn-outline">Send an Enquiry</a>
@@ -426,18 +185,9 @@ footer { padding:55px 0 25px; }
 
 <div class="feature-strip">
   <div class="container features">
-    <div class="feature">
-      <strong>Quality Focused</strong>
-      <small>Attention to product standards</small>
-    </div>
-    <div class="feature">
-      <strong>Professional Service</strong>
-      <small>Clear and responsive communication</small>
-    </div>
-    <div class="feature">
-      <strong>Global Vision</strong>
-      <small>Built for international presentation</small>
-    </div>
+    <div class="feature"><strong>Quality Focused</strong><small>Attention to product standards</small></div>
+    <div class="feature"><strong>Professional Service</strong><small>Clear and responsive communication</small></div>
+    <div class="feature"><strong>Global Vision</strong><small>Built for international presentation</small></div>
   </div>
 </div>
 
@@ -447,15 +197,8 @@ footer { padding:55px 0 25px; }
     <div class="about-copy">
       <div class="eyebrow">Who We Are</div>
       <h2>Built Around Quality & Professionalism</h2>
-      <p>
-        SYED SURGICALS is a sample brand concept designed around
-        professional healthcare supply solutions and a commitment
-        to clear communication.
-      </p>
-      <p>
-        Our presentation focuses on quality awareness, reliable
-        service and a professional approach to customer enquiries.
-      </p>
+      <p>SYED SURGICALS is a sample brand concept designed around professional healthcare supply solutions and a commitment to clear communication.</p>
+      <p>Our presentation focuses on quality awareness, reliable service and a professional approach to customer enquiries.</p>
       <div class="about-points">
         <div><span>◆</span> Quality-conscious approach</div>
         <div><span>◆</span> Customer-focused communication</div>
@@ -484,79 +227,35 @@ footer { padding:55px 0 25px; }
     </div>
 
     <div class="product-grid" id="productGrid">
-
       <article class="product-card" data-category="protection">
-        <div class="product-image">
-          <img src="images/medical-gloves.jpg" alt="Medical gloves">
-        </div>
-        <div class="product-info">
-          <small>Protection</small>
-          <h3>Medical Gloves</h3>
-          <p>General-purpose protective healthcare gloves.</p>
-          <a href="#contact" class="quote-link" data-product="Medical Gloves">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/medical-gloves.jpg" alt="Medical gloves"></div>
+        <div class="product-info"><small>Protection</small><h3>Medical Gloves</h3><p>General-purpose protective healthcare gloves.</p><a href="#contact" class="quote-link" data-product="Medical Gloves">REQUEST INFORMATION →</a></div>
       </article>
 
       <article class="product-card" data-category="apparel">
-        <div class="product-image">
-          <img src="images/surgical-gowns.jpg" alt="Medical gowns">
-        </div>
-        <div class="product-info">
-          <small>Apparel</small>
-          <h3>Medical Gowns</h3>
-          <p>Healthcare apparel and protective clothing.</p>
-          <a href="#contact" class="quote-link" data-product="Medical Gowns">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/surgical-gowns.jpg" alt="Medical gowns"></div>
+        <div class="product-info"><small>Apparel</small><h3>Medical Gowns</h3><p>Healthcare apparel and protective clothing.</p><a href="#contact" class="quote-link" data-product="Medical Gowns">REQUEST INFORMATION →</a></div>
       </article>
 
       <article class="product-card" data-category="protection">
-        <div class="product-image">
-          <img src="images/medical-masks.jpg" alt="Medical masks">
-        </div>
-        <div class="product-info">
-          <small>Protection</small>
-          <h3>Medical Masks</h3>
-          <p>General healthcare face protection supplies.</p>
-          <a href="#contact" class="quote-link" data-product="Medical Masks">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/medical-masks.jpg" alt="Medical masks"></div>
+        <div class="product-info"><small>Protection</small><h3>Medical Masks</h3><p>General healthcare face protection supplies.</p><a href="#contact" class="quote-link" data-product="Medical Masks">REQUEST INFORMATION →</a></div>
       </article>
 
       <article class="product-card" data-category="supplies">
-        <div class="product-image">
-          <img src="images/sterile-drapes.jpg" alt="Medical drapes">
-        </div>
-        <div class="product-info">
-          <small>Supplies</small>
-          <h3>Medical Drapes</h3>
-          <p>General medical draping and protective supplies.</p>
-          <a href="#contact" class="quote-link" data-product="Medical Drapes">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/sterile-drapes.jpg" alt="Medical drapes"></div>
+        <div class="product-info"><small>Supplies</small><h3>Medical Drapes</h3><p>General medical draping and protective supplies.</p><a href="#contact" class="quote-link" data-product="Medical Drapes">REQUEST INFORMATION →</a></div>
       </article>
 
       <article class="product-card" data-category="supplies">
-        <div class="product-image">
-          <img src="images/instrument-trays.jpg" alt="Medical instrument trays">
-        </div>
-        <div class="product-info">
-          <small>Supplies</small>
-          <h3>Instrument Trays</h3>
-          <p>Organizational trays for healthcare environments.</p>
-          <a href="#contact" class="quote-link" data-product="Instrument Trays">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/instrument-trays.jpg" alt="Medical instrument trays"></div>
+        <div class="product-info"><small>Supplies</small><h3>Instrument Trays</h3><p>Organizational trays for healthcare environments.</p><a href="#contact" class="quote-link" data-product="Instrument Trays">REQUEST INFORMATION →</a></div>
       </article>
 
       <article class="product-card" data-category="supplies">
-        <div class="product-image">
-          <img src="images/sterilization-pouches.jpg" alt="Sterilization pouches">
-        </div>
-        <div class="product-info">
-          <small>Supplies</small>
-          <h3>Sterilization Pouches</h3>
-          <p>Packaging supplies for appropriate sterilization systems.</p>
-          <a href="#contact" class="quote-link" data-product="Sterilization Pouches">REQUEST INFORMATION →</a>
-        </div>
+        <div class="product-image"><img src="images/sterilization-pouches.jpg" alt="Sterilization pouches"></div>
+        <div class="product-info"><small>Supplies</small><h3>Sterilization Pouches</h3><p>Packaging supplies for appropriate sterilization systems.</p><a href="#contact" class="quote-link" data-product="Sterilization Pouches">REQUEST INFORMATION →</a></div>
       </article>
-
     </div>
     <p id="noResults" style="display:none;color:#aaa;margin-top:25px;">No matching products found.</p>
   </div>
@@ -570,21 +269,9 @@ footer { padding:55px 0 25px; }
       <p>A professional approach built around transparency and attention to detail.</p>
     </div>
     <div class="quality-grid">
-      <div class="quality-card">
-        <div class="number">01</div>
-        <h3>Quality Awareness</h3>
-        <p>We value clear product information and attention to relevant quality requirements.</p>
-      </div>
-      <div class="quality-card">
-        <div class="number">02</div>
-        <h3>Clear Communication</h3>
-        <p>Every enquiry deserves a helpful, professional and timely response.</p>
-      </div>
-      <div class="quality-card">
-        <div class="number">03</div>
-        <h3>Customer Focus</h3>
-        <p>Our presentation is designed to make product information easy to explore.</p>
-      </div>
+      <div class="quality-card"><div class="number">01</div><h3>Quality Awareness</h3><p>We value clear product information and attention to relevant quality requirements.</p></div>
+      <div class="quality-card"><div class="number">02</div><h3>Clear Communication</h3><p>Every enquiry deserves a helpful, professional and timely response.</p></div>
+      <div class="quality-card"><div class="number">03</div><h3>Customer Focus</h3><p>Our presentation is designed to make product information easy to explore.</p></div>
     </div>
   </div>
 </section>
@@ -594,23 +281,10 @@ footer { padding:55px 0 25px; }
     <div class="contact-info">
       <div class="eyebrow">Get In Touch</div>
       <h2>Let's Start a Conversation.</h2>
-      <p>
-        Have a question about our sample catalogue?
-        Send an enquiry and we'll be glad to hear from you.
-      </p>
-
-      <div class="contact-detail">
-        <small>Email Address</small>
-        <strong>syedismaeel@gmail.com</strong>
-      </div>
-      <div class="contact-detail">
-        <small>Brand</small>
-        <strong>SYED SURGICALS</strong>
-      </div>
-      <div class="contact-detail">
-        <small>Location</small>
-        <strong>Sialkot, Pakistan</strong>
-      </div>
+      <p>Have a question about our sample catalogue? Send an enquiry and we'll be glad to hear from you.</p>
+      <div class="contact-detail"><small>Email Address</small><strong>syedismaeel@gmail.com</strong></div>
+      <div class="contact-detail"><small>Brand</small><strong>SYED SURGICALS</strong></div>
+      <div class="contact-detail"><small>Location</small><strong>Sialkot, Pakistan</strong></div>
     </div>
 
     <form class="contact-form" id="contactForm">
@@ -622,9 +296,7 @@ footer { padding:55px 0 25px; }
       <input type="text" id="subject" placeholder="Subject">
       <textarea id="message" placeholder="Write your message..." required></textarea>
       <button type="submit" class="btn">Send Message →</button>
-      <p style="font-size:10px;color:#858b8d;margin-top:12px;">
-        This sample form opens your email application to send the enquiry.
-      </p>
+      <p style="font-size:10px;color:#858b8d;margin-top:12px;">This sample form opens your email application to send the enquiry.</p>
     </form>
   </div>
 </section>
@@ -636,23 +308,10 @@ footer { padding:55px 0 25px; }
       <h2>Client Experiences</h2>
       <p>Sample review layout for demonstration. Replace with genuine customer feedback only.</p>
     </div>
-
     <div class="reviews-grid">
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>“A clean and professional presentation of healthcare supplies.”</p>
-        <strong>Sample Review 01</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>“The catalogue layout makes it easy to explore the available categories.”</p>
-        <strong>Sample Review 02</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>“A simple and organized way to make product enquiries.”</p>
-        <strong>Sample Review 03</strong>
-      </div>
+      <div class="review"><div class="stars">★★★★★</div><p>“A clean and professional presentation of healthcare supplies.”</p><strong>Sample Review 01</strong></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“The catalogue layout makes it easy to explore the available categories.”</p><strong>Sample Review 02</strong></div>
+      <div class="review"><div class="stars">★★★★★</div><p>“A simple and organized way to make product enquiries.”</p><strong>Sample Review 03</strong></div>
     </div>
     <p class="demo-note">All testimonials above are fictional examples and are not verified customer reviews.</p>
   </div>
@@ -666,7 +325,6 @@ footer { padding:55px 0 25px; }
     <a href="#contact" class="btn">Contact Us</a>
   </div>
 </div>
-
 </main>
 
 <footer>
@@ -677,16 +335,10 @@ footer { padding:55px 0 25px; }
         <p>A sample brand concept for professional medical and healthcare supply solutions.</p>
       </div>
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#quality">Our Approach</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Our Approach</a><a href="#contact">Contact</a>
       </div>
     </div>
-    <div class="copyright">
-      © <span id="year"></span> SYED SURGICALS. All rights reserved.
-    </div>
+    <div class="copyright">© <span id="year"></span> SYED SURGICALS. All rights reserved.</div>
   </div>
 </footer>
 
@@ -706,7 +358,6 @@ const searchInput = document.getElementById('searchInput');
 const filters = document.querySelectorAll('.filter');
 const cards = document.querySelectorAll('.product-card');
 const noResults = document.getElementById('noResults');
-
 let activeFilter = 'all';
 
 function filterProducts() {
@@ -714,9 +365,7 @@ function filterProducts() {
   let visible = 0;
 
   cards.forEach(card => {
-    const matchesCategory =
-      activeFilter === 'all' || card.dataset.category === activeFilter;
-
+    const matchesCategory = activeFilter === 'all' || card.dataset.category === activeFilter;
     const matchesSearch = card.textContent.toLowerCase().includes(search);
     const show = matchesCategory && matchesSearch;
 
@@ -740,8 +389,7 @@ filters.forEach(button => {
 
 document.querySelectorAll('.quote-link').forEach(link => {
   link.addEventListener('click', () => {
-    document.getElementById('subject').value =
-      'Enquiry about ' + link.dataset.product;
+    document.getElementById('subject').value = 'Enquiry about ' + link.dataset.product;
   });
 });
 
@@ -753,19 +401,13 @@ document.getElementById('contactForm').addEventListener('submit', event => {
   const subject = document.getElementById('subject').value.trim() || 'Website Enquiry';
   const message = document.getElementById('message').value.trim();
 
-  const body =
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n\n' +
-    'Message:\n' + message;
+  const body = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
 
-  window.location.href =
-    'mailto:syedismaeel@gmail.com?subject=' +
-    encodeURIComponent(subject) +
-    '&body=' + encodeURIComponent(body);
+  window.location.href = 'mailto:syedismaeel@gmail.com?subject=' +
+    encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
